@@ -1,0 +1,12 @@
+* { margin: 0px; padding: 0px; }
+
+h1 { margin-left: 100px; }
+header { color: #ffffff; background-color: #000000; margin-bottom: 20px; padding-bottom: 10px;}
+.main {  margin-left: 50px; margin-right: 50px; }
+#result { text-align: justify; padding-right: 0px; }
+#image {
+	width: 300px; padding: 0px;
+	border-radius: 10px; -moz-border-radius: 10px; -wbkit-border-radius: 10px;
+}
+label, p { font-weight: bold; }
+output { margin-left: 20px; margin-right: 20px}

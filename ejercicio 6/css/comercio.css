@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+h1 { font-family: 'Righteous', cursive; font-weight: bold; }
+img { width: 300px; height: 200px; }
+.main{ margin: 20px }
+.card { width: 320px; padding: 5px; }
+.card label, #ressub { font-weight: bold; }
+#cant{
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+	width: 60px;
+}
+#sub, #reset { width: 150px; }
+#tablero label, #tot { font-weight: bold; }
+.container { background: url('../imagenes/ecommerce-banner.png') no-repeat; background-size: cover; text-align: right;}
+.text-center { font-weight: bold; }
+#car { width: 60px; height: 40px; padding-left: 20px;}

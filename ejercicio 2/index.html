@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Calculo de Notas</title>
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/notas.css">
+</head>
+<body>
+	<header><head>CALCULAR ESTADO DE ALUMNO</head></header>
+	<center>
+		<!--Caja principal-->
+		<div id="principal">
+			<!--Tabla izquierda de detalles-->
+			<table class="table" id="detalles">
+				<div class="card">
+					<thead class="thead-dark">
+						<tr><th colspan="2">
+							<h5 class="card-title">Detalles:</h5>
+						</th></tr>
+					</thead>
+					<tr class="alert alert-dark"><td><h6 class="card-title">Libre:</h6></td><td><p class="card-text">Asistencia menor a 60%</p></td></tr>
+					<tr class="alert alert-danger">
+						<td><h6 class="card-title">Desaprobado:</h6></td>
+						<td><p class="card-text">Asistencia mayor a 60% y nota menor a 4 en un parcial</p></td>
+					</tr>
+					<tr class="alert alert-success">
+						<td><h6 class="card-title">Regular:</h6></td>
+						<td><p class="card-text">Asistencia mayor a 60% y nota mayor a 4 en los dos parciales</p></td>
+					</tr>
+				</div>
+			</table>
+			<!--Formulario-->
+			<table id="form">
+				<form name="notas" id="notas" autocomplete="off">
+					<tr>
+						<td>
+							<label>
+							Nota primer parcial:
+							</label><br>
+							<!--Radio buuttons-->
+							<div class="btn-group btn-group-toggle" data-toggle="buttons" id="buttons" tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Debe elegir una nota para continuar">
+							  <label class="btn btn-secondary">
+							    <input type="radio" name="nota1" id="1" value="1"> 1
+							  </label>
+							  <label class="btn btn-secondary">
+							    <input type="radio" name="nota1" id="2" value="2"> 2
+							  </label>
+							  <label class="btn btn-secondary">
+							    <input type="radio" name="nota1" id="3" value="3"> 3
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota1" id="4" value="4"> 4
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota1" id="5" value="5"> 5
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota1" id="6" value="6"> 6
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota1" id="7" value="7"> 7
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota1" id="8" value="8"> 8
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota1" id="9" value="9"> 9
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota1" id="10" value="10"> 10
+							  </label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>Nota segundo parcial: </label><br>
+							<!--Radio Buttons-->
+							<div class="btn-group btn-group-toggle" data-toggle="buttons" id="buttons2" tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Debe elegir una nota para continuar">
+							  <label class="btn btn-secondary">
+							    <input type="radio" name="nota2" id="1" value="1"> 1
+							  </label>
+							  <label class="btn btn-secondary">
+							    <input type="radio" name="nota2" id="2" value="2"> 2
+							  </label>
+							  <label class="btn btn-secondary">
+							    <input type="radio" name="nota2" id="3" value="3"> 3
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota2" id="4" value="4"> 4
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota2" id="5" value="5"> 5
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota2" id="6" value="6"> 6
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota2" id="7" value="7"> 7
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota2" id="8" value="8"> 8
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota2" id="9" value="9"> 9
+							  </label>
+							  <label class="btn btn-success">
+							    <input type="radio" name="nota2" id="10" value="10"> 10
+							  </label>
+							</div>
+						</td>
+					</tr>
+					<tr><td><label>Porcentaje de asistencia:</label></td></tr>
+					<tr><td>
+						<!--Seleccionadores de asistencia-->
+						<input type="range" name="asis" min="0" max="100" id="asis" value="0" required>
+						<input type="number" name="asistencia" id="por" for="notas" placeholder="Ingrese un numero" tabindex="0" data-toggle="popover" data-trigger="focus" data-content="Ingrese un valor numerico entre 0 y 100." required><b> %</b>
+					</td></tr>
+					<tr><td><br>
+						<button id="calc" class="btn btn-success" type="button" role="button">Calcular</button>
+					</td></tr>
+				</form>
+			</table>
+			<!--Tabla derecha estado del alumno y resultados-->
+			<table id="status" class="table">
+				<thead class="thead-light"><tr><th colspan="2">Estado del alumno: </th></tr></thead>
+				<tr>
+					<td><label>Nota primer parcial:</label></td>
+					<td><output id="n1"></output></td>
+				</tr>
+				<tr>
+					<td><label>Nota segundo parcial:</label></td>
+					<td><output id="n2"></output></td>
+				</tr>
+				<tr>
+					<td><label>Promedio de notas:</label></td>
+					<td><output id="promedio"></output></td>
+				</tr>
+				<tr>
+					<td><label>Porcentaje de asistencia:</label></td>
+					<td><output id="asistencia"></output></td>
+				</tr>
+				<tr class="alert" role="alert" id="alert">
+					<td><label>Estado:</label></td>
+					<td><output id="estado"></output></td>
+			</table>
+		</div>
+	</center>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="js/notas.js"></script>
+</body>
+</html>
+

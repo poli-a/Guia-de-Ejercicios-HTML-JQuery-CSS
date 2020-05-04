@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>Programacion Series</title>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/peliculas.css">
+</head>
+<body>
+	<!--Cabecera. centrando con container-->
+	<header><div class="container"></div><div class="col-md-12"><h1>Programacion Series</h1></div></header>
+	<!--Definiendo caja principal y uso de sistema Grill-->
+	<div class="main row">
+		<section id="form" class="col-md-2 col-lg-2">
+		<!--Uso componente List group de Bootstrap, formulario personalizado-->
+			<form><div class="list-group">
+				  <a href="#dr" id="dh" class="list-group-item list-group-item-action">Dr. House</a>
+				  <a href="#prison" id="pb" class="list-group-item list-group-item-action">Prison Break</a>
+				  <a href="#walking" id="twd" class="list-group-item list-group-item-action">The Walking Dead</a>
+				  <a href="#game" id="got" class="list-group-item list-group-item-action">Game of Thrones</a>
+			</div></form>
+		</section>
+		<!--Mostrando datos-->
+		<div class="col-md-5 col-lg-7" id="result">
+				<div class="tab-content" id="contenido">
+					<div class="tab-pane fade" id="dr" role="tabpanel" aria-labelledby="list-home-list">
+						<p>Sinopsis: </p>Gregory House, el mejor médico del hospital, es un hombre antipático que está especializado en el diagnóstico de enfermedades. Su carácter extravagante, su rebeldía y su honradez con los pacientes y su equipo lo convierten en una persona única. Trata de evitar la relación con los pacientes, porque lo que le interesa por encima de todo es la investigación de las enfermedades. Es además adicto a los calmantes y a las series de hospitales.
+					</div>
+				    <div class="tab-pane fade" id="prison" role="tabpanel" aria-labelledby="list-profile-list">
+				    	<p>Sinopsis: </p>Lincoln es sentenciado a muerte y enviado a la Penitenciaría Estatal Fox River, para cumplir allí su condena hasta el día de su ejecución. Michael Scofield, el hermano menor de Lincoln, está convencido de la inocencia de su hermano y elabora un plan de escape de la prisión.
+				    </div>
+				    <div class="tab-pane fade" id="walking" role="tabpanel" aria-labelledby="list-messages-list">
+				    	<p>Sinopsis: </p>Tras un apocalipsis zombie, un grupo de supervivientes, dirigidos por el policía Rick Grimes, recorre los Estados Unidos para ponerse a salvo.
+				    </div>
+				    <div class="tab-pane fade" id="game" role="tabpanel" aria-labelledby="list-settings-list">
+				    	<p>Sinopsis: </p>La historia se desarrolla en un mundo ficticio de carácter medieval donde hay Siete Reinos. Hay tres líneas argumentales principales: la crónica de la guerra civil dinástica por el control de Poniente entre varias familias nobles que aspiran al Trono de Hierro; la creciente amenaza de "los otros", seres desconocidos que viven al otro lado de un inmenso muro de hielo que protege el Norte de Poniente; y el viaje de Daenerys Targaryen, la hija exiliada del rey que fue asesinado en una guerra civil anterior, y que pretende regresar a Poniente para reclamar sus derechos dinásticos.
+				    </div>
+				</div>
+				<!--Muestra dia y hora de la serie-->
+				<label>Dia: </label><output id="dia"></output><label>Horario: </label><output id="hora"></output>
+		</div>
+		<!--Muestra imagen de la serie-->
+		<div class="col-md-5 col-lg-3"><img id="image" alt=""></div>
+	</div>
+
+	<!--Script jQuery, popper.js y Bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="js/peliculas.js"></script>
+</body>
+</html>

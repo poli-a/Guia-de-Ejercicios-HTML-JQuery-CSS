@@ -1,0 +1,14 @@
+/*Estilo de fuente*/
+p, label { font-weight: bold; }
+/*Estilo de cabecera*/
+header { background-color: #000000; color: #ffffff; padding-bottom: 5px; }
+/*Estilo de contenedor princpal*/
+#principal {
+	border: solid 1px; border-color: #000000; padding-bottom: 10px;
+	border-radius: 20px 5px; -moz-border-radius: 20px 5px; -webkit-border-radius: 20px 5px;
+}
+/*Estilo de input=date*/
+input { border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+/*Estilo de resultado y ayuda para el usuario*/
+#result { width: 240px; margin-left: 10px; }
+#help { width: 300px; font-size: 10px; color:  #e30e21; }

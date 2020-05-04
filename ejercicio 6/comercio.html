@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<meta charset=utf-8>
+		<meta name=viewport content="width=device-width, user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimun-scale=1.0">
+		<title>Comercio</title>
+		<!--Bootstrap, aplicacion de tema de bootswatch.com/darkly-->
+		<link rel="stylesheet" href="css/bootstrap.min.css" >
+		<link rel="stylesheet" type="text/css" href="css/comercio.css">
+	</head>
+	<body>
+		<!--Cabezera-->
+		<div class="container"><header class="col-12"><head><h1>E-COMMERCE</h1></head></header></div>
+		<!--Caja principal-->
+		<div class="main row">
+			<div class="col-md-6 offset-md-1">
+				<form id="form">
+					<!--Lista de productos-->
+				    <div class="list-group" role="tablist">
+				      <button class="list-group-item list-group-item-action active" name="item" data-toggle="list" role="tab" value="30000">Notebook Vaio Intel Core I3</button>
+				      <button class="list-group-item list-group-item-action" name="item" id="1" data-toggle="list" role="tab" value="45000">Notebook Lenovo Intel Core I7</button>
+				      <button class="list-group-item list-group-item-action" name="item" id="2" data-toggle="list" role="tab" value="50000">Notebook Compaq Intel Core I7</button>
+				      <button class="list-group-item list-group-item-action" name="item" data-toggle="list" role="tab" value="9000">Notebook RCA Intel Core I3</button>
+				      <button class="list-group-item list-group-item-action" name="item" data-toggle="list" role="tab" value="45000">Notebook Positivo BGH Core I7</button>
+				      <button class="list-group-item list-group-item-action" name="item" data-toggle="list" role="tab" value="5400">Impresora Multifunción HP</button>
+				      <button class="list-group-item list-group-item-action" name="item" data-toggle="list" role="tab" value="6700">Tablet Philco Intel 16 GB</button>
+				      <button class="list-group-item list-group-item-action" name="item" data-toggle="list" role="tab" value="4400">Tablet Huawei 16 GB</button>
+				    </div>
+				</form>
+			</div>
+			<!--Tarjeta presentacion producto-->
+			<div clas="col-md-5" ><table class="card">
+				<tr><td colspan="2"><img id="imgprod" alt="Elija un producto"></td></tr>
+				<div class="card-body">
+				   	<tr class="text-center">
+				   		<td><label class="card-text">Precio:   $</label><output id="price" form="form"></output></td>
+				   		<td>
+				   			<label class="card-text">Cantidad: </label>
+				   			<input type="number" name="cant" form="form" id="cant" min="1">
+				   		</td>
+				   	</tr>
+				   	<tr><td colspan="2"><small id="helpcant"></small></td></tr>
+				   	<tr><td><button id="sub" class="btn btn-info">SUBTOTAL</button></td>
+				   		<td><button class="btn btn-dark" id="reset">REESTABLECER</button></td></tr>
+			   		<tr class="text-center"><td colspan="2"><label>Subtotal:   $</label><output id="ressub" form="form"></output></td></tr>
+			   		<tr><td colspan="2" class="text-center"><button class="btn btn-success" id="add">Agregar al carrito</button></td></tr>
+			   		<tr><td colspan="2"><small id="helpsub"></small></td></tr>
+		   		</div>
+			</table></div>
+			<!--Seccion carrito de compras-->
+			<div class=" col-md-10 offset-1">
+				<div colspan="4" class="text-center">CARRITO DE COMPRAS<img id="car" src="imagenes/carrito.png"></div>
+				<table class="table table-sm" id="tablero">
+					<tr><thead class="thead-dark">
+						<th>Producto</th><th>Precio Unitario</th><th>Unidades</th><th>Subtotal</th>
+					</thead></tr>
+					<tr><td><output id="prod1"></output></td><td><output id="price1"></output></td>
+						<td><output id="unid1"></output></td><td><output id="sub1"></output></td></tr>
+					<tr><td><output id="prod2"></output></td><td><output id="price2"></output></td>
+						<td><output id="unid2"></output></td><td><output id="sub2"></output></td></tr>
+					<tr><td><output id="prod3"></output></td><td><output id="price3"></output></td>
+						<td><output id="unid3"></output></td><td><output id="sub3"></output></td></tr>
+					<tr><td class="text-center" colspan="4"><label>Total:   </label><output id="tot"></output></td></tr>
+				</table>
+				<div class="text-center">
+					<output id="helpprod"></output><br>
+					<button class="btn btn-primary" id="total">CALCULAR TOTAL</button>
+					<button class="btn btn-dark" id="vaciar">VACIAR CARRITO</button>
+					<button class="btn btn-success" id="confirm">CONFIRMAR COMPRA</button>
+				</div>
+			</div>
+		</div>
+
+		<!--Script jQuery, popper.js y Bootstrap-->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script src="js/comercio.js"></script>
+	</body>
+</html>

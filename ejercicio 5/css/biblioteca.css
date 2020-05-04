@@ -1,0 +1,8 @@
+#result {
+	border: solid 1px;
+	border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+	padding-left: 50px; padding-top: 50px; margin-top: 10px; padding-bottom: 50px;
+}
+#status{
+	font-weight: bold; font-size: 20;
+}
